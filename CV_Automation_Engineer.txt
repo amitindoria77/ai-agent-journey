@@ -1,0 +1,143 @@
+                                                                                                                                                    
+E-Mail:amitindoria4@gmail.com
+Mobile: 8446782843
+ 
+
+
+
+Challenging Assignments in the areas of Automation Testing\ Performance Testing \Functional Testing.
+Dynamic professional with 8.5 years of experience in Testing.
+Learning new skills - Machine Learning, Deep learning, Data Mining, Data Analysis, Predictive Analytics, R, Business Intelligence.
+
+Automation Testing
+Proficient in using test automation tools such as Selenium WebDriver, Grid, QTP/UFT to develop automation testing scripts for web applications
+Expertise on TDD, Page object model, TestNG, Maven for Project building, Jenkins for continuous integration and HP Quality Centre for defect logging.
+Develop CI/CD Pipeline using Git, Jenkins and Docker.
+Developed Data-Driven and Hybrid Framework.
+Developed automation test scripts of GUI, the desktop-based application using Java, VB Scripts.
+Proficient in using object repository, descriptive programming, and checkpoints in QTP. 
+Report Creation and Script maintenance.
+
+Performance Testing
+Execution of performance testing using Load Runner, HP Site-Scope and Performance Centre, HP Quality Centre for Web, Web services \API, Siebel, SAP, and Java applications.
+Worked on various Protocols like Web HTTP, SAP GUI, Web Services, True Client Web, Siebel web and Java Vuser.
+Web applications, Web Service and Rest API, load Testing.
+Performed Load Test, Stress Test, Break Point Test, Endurance Test, Spike Test, Fail-over Test etc.
+Monitoring of web and app server and hardware resources such as Disk, Memory, CPU and Garbage collection.
+Database Monitoring and Profiling.
+Developed POC’s to present clients.
+
+Functional Testing and Test management
+Performed System, Integration and End to End testing in different domains.
+Professional expertise in Web Services Testing, Smoke Testing, Backed end Testing, User Acceptance Testing (UAT), Functional Testing, Positive/ Negative Testing, System Testing, Regression Testing, UI Validation, Ad-hoc Testing, Cross-Browser/Cross-Platform Testing.
+Web service testing using Soap UI that includes SOA (Service-oriented Architecture) including SOAP, WSDL, Web Services validation.
+Proactively worked in an Agile Environment to find and fix defects at an early stage.
+Experience working in both Waterfall and Agile environments.
+Creation of Testing artefacts such as Test Plan, Test Exit report creation.
+Customer interactions and meetings with stakeholders.
+Coordination with onshore and offshore team members for testing activities and resolving critical issues with development teams.
+
+Onshore Projects
+Worked for UK Post Office in Reading, UK.
+Worked for du Telecom in Dubai.
+
+
+
+Tools: Selenium Web Driver, HP QTP/UFT, Load Runner, Performance Centre, Neo-Load, Site-Scope, Soap UI, HP Quality Centre, Micro-Focus Mobile Centre, Tableau, Java Visual VM, R Studio, Jupyter NoteBook, Google Colab
+Programming Languages: Python, Java, SQL, VB Script, HTML
+Domain: Insurance, Retail, Telecom, Airline
+Database: My SQL, Oracle 10g, Oracle 11g, Toad
+Platforms: Windows, Linux, Solaris, RedHat
+
+
+
+ISTQB Certification in Software Testing 
+Splunk Fundamentals.
+Programming for Everybody (Getting Started with
+Python) (University of Michigan, Coursera)
+Python Data Structures (University of Michigan, Coursera)
+Intermediate SQL (Data Camp)
+Neural Networks and Deep Learning (Coursera)
+Basic Artificial Neural Networks in Python (Coursera)
+
+
+
+HCL, Client -Sun Life Financial (India) – Test lead (Dec 2018 – Jan2020)
+    
+Sun Life Financial is a financial services company that helps clients to achieve lifetime financial security. Performed Automation and Performance testing for different applications such Service now, JIRA, Tableau, mobile apps, FileNet and other insurance, Investment banking, Financial and Asset management applications.
+
+Worked as Individual contributor for Canada operations, starting from requirement gather till client signoffs.
+Creation of Test plan, Test exit reports and signoff from the client.
+Design workload model to run load tests to identify bottlenecks. 
+Developed automation and performance test scripts for newly developed and legacy applications using selenium webdriver and load runner.
+Worked on a company standard framework based on selenium webdriver, Page object model, Maven and TestNG.
+Developed CI/CD Pipeline using Git, Jenkins.
+Test Execution of automation suite and load tests. Monitoring and Analysis of test results.
+Identify the bottlenecks and shared insights with customers.
+Logging functional and performance defects. Providing tuning recommendation to improve the performance of the application.
+
+Atos UK Pvt Limited (UK) – Automation Tester (May 2017 – April 2018)
+
+Worked for client UK post Office on various applications such as Success Factor SAP cloud, Banking applications (RBS, Lloyds, NatWest, AIB GB, Barclays, Etc.), Retail Applications (MoneyGram, Travel Insurance etc.) 
+
+Requirement gathering and responsible for the building Framework, Test scripts creation and execution for Backoffice applications.
+Responsible System, Integration and Regression testing for POS applications.
+Created a framework using selenium web driver with the use of Page object model, Maven and TestNG.
+Developed Test Scripts for identified uses cases.
+Test Execution, analysis of test results, identify and raised defects, conducting defect status calls.
+Client meeting at client premises and overcall with different stakeholders.
+Maintenance and enhancements of the test suite with each change request.
+Test exit report, Client signoff.
+It was a challenging project due to the diversity of work in term of the domain and stakeholders, many organisations were involved in it such as banks and insurance partners.
+Atos (India) and Atos Middle East Pvt Limited (UAE)– Automation and Performance Tester (April 2015 – Feb 2017)
+Worked for Dubai telecom, the aim was to identify existing/new bottlenecks and mitigate them to deliver the quality product and deploy a bug-free application (Siebel CRM, Billing, Tibco EAI) on production Environment.
+
+Requirement gathering for Automation and Performance Testing.
+Developed framework for automation, test scripts using selenium web driver, TestNG for automation.
+Test execution and Script Maintenance.
+Analysis of Automation Test Results and raising defects.
+Performed proof of concept and feasibility test for various applications for performance Testing.
+Created test scripts on different protocols such as Web HTTP, Seibel web, Java Vuser using load runner.
+Designed the workload model and performed Load Tests along with monitoring of resources.
+Analysis of test results identify bottlenecks and provide recommendation to the customer.
+Set up Performance Test Environment because everything started from scratch. 
+
+Tata Consultancy Services (India) – Automation & Performance Tester (Jan 2012 – March 2015)
+
+Worked for British Airways on 3 tier application (UI, Middleware, and backend). Aim was to perform regression testing using automation suit and test the performance of newly developed business services and resources.
+
+Automation feasibility and complexity analysis.
+Understanding Test data requirement and data preparation for running automation suite.
+Developed automation test scripts for web application using VB Scripting and running the automation suite through QTP.
+Raised defects in ALM and retesting after confirmation of defect fix from respective dev team.
+Script Debugging and help other team members in scripting. 
+Web Service testing using SOAP UI before the creation of automation or performance test script.
+Development of Performance Test scripts for identified scenarios using LoadRunner
+Created Load Test of Scenario and monitoring of resources such as CPU, Memory, Disk Utilisation.
+Load Test execution and analysis of test results.
+
+Tata Consultancy Services (India) – Functional Tester & Network Tester (Nov 2011– Dec 2012)
+
+Worked for British Telecom and performed testing for various BT products such as L2C (Lead to cash), T2R (Trouble to Resolve) one Voice core and one Voice IP.	
+Created system, integration and regression test cases and preparation of test data.
+Performed execution of Test cases and update the Quality centre.
+Identified defects and raised them into QC with all findings and evidences and assign to the dev teams.  
+Retest functionality after defect fix and update the QC with root cause analysis. 
+Prepared defect sheet and execution report.
+Designed dummy networks Africa and Asia regions and tested them.
+
+
+
+
+2020                   Master’s in Data Analytics from National College of Ireland, Ireland
+2011	           Bachelor of Technology in Electronics and Communications from D.C.R.U.S.T, India 
+2007	           XII (C.B.S.E Board) from Tagore Academy Public School, India
+2005                    X (C.B.S.E Board) from Nishant Public Sr. Sec School, India
+
+
+
+
+Playing cricket and football 
+Dancing and Watching TV series
+Watching Stand Up comedy
+

@@ -5,11 +5,14 @@ import os
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
 # Step 1: Read the document
-with open("knowledge.txt", "r") as f:
+with open("CV_Automation_Engineer.txt", "r") as f:
     text = f.read()
 
 # Step 2: Chunk it — splitting by line is simple and works for our small test file
-chunks = [line.strip() for line in text.split("\n") if line.strip()]
+#chunks = [line.strip() for line in text.split("\n") if line.strip()]
+
+# Chunk by paragraph (split on blank lines), so each job/section stays together
+chunks = [chunk.strip() for chunk in text.split("\n\n") if chunk.strip()]
 
 print(f"Loaded {len(chunks)} chunks:")
 for i, chunk in enumerate(chunks):
@@ -90,3 +93,7 @@ Question: {question}
     )
 
     print("\nClaude:", response.content[0].text)
+
+    print(f"Loaded {len(chunks)} chunks:")
+for i, chunk in enumerate(chunks):
+    print(f"  [{i}] {chunk[:80]}...")  # print first 80 chars so output stays readable
