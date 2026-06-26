@@ -1,4 +1,5 @@
 import anthropic
+import chromadb
 import os
 import requests
 
@@ -48,58 +49,54 @@ def get_weather(city):
     temp = weather["current_weather"]["temperature"]
     return f"{temp}°C in {city}"
 
-# Step 3: Send the user's question, with the tools menu available
-user_input = "What is 47 * 12? and What is the weather in Carlow?"
-messages = [{"role": "user", "content": user_input}]
+# Step 3: Interactive loop
+while True:
+    user_input = input("\nYou: ")
+    if user_input.lower() == "quit":
+        break
 
-response = client.messages.create(
-    model="claude-sonnet-4-6",
-    max_tokens=1000,
-    tools=tools,
-    messages=messages
-)
+    messages = [{"role": "user", "content": user_input}]
 
-# Step 4: Check if Claude asked to use a tool
-if response.stop_reason == "tool_use":
-    tool_use_blocks = [block for block in response.content if block.type == "tool_use"]
-    tool_results = []
-
-    for tool_use_block in tool_use_blocks:
-        tool_name = tool_use_block.name
-        tool_input = tool_use_block.input
-
-        print(f"Claude wants to call: {tool_name} with {tool_input}")
-
-        if tool_name == "calculator":
-            result = calculator(tool_input["expression"])
-        elif tool_name == "get_weather":
-            result = get_weather(tool_input["city"])
-
-        print(f"Local result: {result}")
-
-        tool_results.append({
-            "type": "tool_result",
-            "tool_use_id": tool_use_block.id,
-            "content": result
-        })
-
-    # Add Claude's original message (with all tool requests) to history
-    messages.append({"role": "assistant", "content": response.content})
-
-    # Add ALL tool results together in one message
-    messages.append({
-        "role": "user",
-        "content": tool_results
-    })
-
-    # Step 5: Send the results back so Claude can write the final answer
-    final_response = client.messages.create(
+    response = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=1000,
         tools=tools,
         messages=messages
     )
+    # Step 4: Check if Claude asked to use a tool
+    if response.stop_reason == "tool_use":
+        tool_use_blocks = [block for block in response.content if block.type == "tool_use"]
+        tool_results = []
 
-    print("Claude's final answer:", final_response.content[0].text)
-else:
-    print(response.content[0].text)
+        for tool_use_block in tool_use_blocks:
+            tool_name = tool_use_block.name
+            tool_input = tool_use_block.input
+
+            print(f"Claude wants to call: {tool_name} with {tool_input}")
+
+            if tool_name == "calculator":
+                result = calculator(tool_input["expression"])
+            elif tool_name == "get_weather":
+                result = get_weather(tool_input["city"])
+
+            print(f"Local result: {result}")
+
+            tool_results.append({
+                "type": "tool_result",
+                "tool_use_id": tool_use_block.id,
+                "content": result
+            })
+
+        messages.append({"role": "assistant", "content": response.content})
+        messages.append({"role": "user", "content": tool_results})
+
+        final_response = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=1000,
+            tools=tools,
+            messages=messages
+        )
+
+        print("Claude:", final_response.content[0].text)
+    else:
+        print("Claude:", response.content[0].text)
