@@ -1,6 +1,7 @@
 import chromadb
 import anthropic
 import os
+import re
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
@@ -11,16 +12,59 @@ with open("CV_Automation_Engineer.txt", "r") as f:
 # Step 2: Chunk it — splitting by line is simple and works for our small test file
 #chunks = [line.strip() for line in text.split("\n") if line.strip()]
 
-# Chunk by paragraph (split on blank lines), so each job/section stays together
-chunks = [chunk.strip() for chunk in text.split("\n\n") if chunk.strip()]
+# # Chunk by paragraph (split on blank lines), so each job/section stays together
+# chunks = [chunk.strip() for chunk in text.split("\n\n") if chunk.strip()]
 
-print(f"Loaded {len(chunks)} chunks:")
-for i, chunk in enumerate(chunks):
-    print(f"  [{i}] {chunk}")
+# print(f"Loaded {len(chunks)} chunks:")
+# for i, chunk in enumerate(chunks):
+#     print(f"  [{i}] {chunk}")
+
+# Chunk by paragraph (split on blank lines), so each job/section stays together
+# chunks = [chunk.strip() for chunk in text.split("\n\n") if chunk.strip()]
+
+# Add explicit section labels to chunks that need clearer context for retrieval
+# for i, chunk in enumerate(chunks):
+#     if "Master" in chunk and "Bachelor" in chunk:
+#         chunks[i] = "Education: " + chunk
+
+import re
+
+paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+
+# Job headers look like "Company Name (Location) – Title (Month YYYY – Month YYYY)"
+job_header_pattern = re.compile(r'\([A-Za-z]+\.?\s*\d{4}\s*[–-]\s*[A-Za-z]*\.?\s*\d{4}\)')
+
+chunks = []
+current_job_chunk = None
+
+for para in paragraphs:
+    # Special case: stop job-merging when we hit the education paragraph
+    if "Master" in para and "Bachelor" in para:
+        if current_job_chunk is not None:
+            chunks.append(current_job_chunk.strip())
+            current_job_chunk = None
+        chunks.append("Education: " + para)
+        continue
+
+    if job_header_pattern.search(para):
+        # New job starts — flush the previous one first
+        if current_job_chunk is not None:
+            chunks.append(current_job_chunk.strip())
+        current_job_chunk = para
+    elif current_job_chunk is not None:
+        # Still inside the current job — keep appending
+        current_job_chunk += "\n\n" + para
+    else:
+        # Not in a job yet (e.g. skills/summary section) — keep as its own chunk
+        chunks.append(para)
+
+if current_job_chunk is not None:
+    chunks.append(current_job_chunk.strip())
 
 # Step 3: Set up Chroma and store chunks
-chroma_client = chromadb.Client()
-collection = chroma_client.create_collection(name="knowledge_base")
+chroma_client = chromadb.PersistentClient(path="./chroma_db")
+collection = chroma_client.get_or_create_collection(name="knowledge_base")
+
 
 # Add each chunk with a unique ID
 collection.add(

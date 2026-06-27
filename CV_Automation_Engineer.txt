@@ -10,6 +10,7 @@ Dynamic professional with 8.5 years of experience in Testing.
 Learning new skills - Machine Learning, Deep learning, Data Mining, Data Analysis, Predictive Analytics, R, Business Intelligence.
 
 Automation Testing
+
 Proficient in using test automation tools such as Selenium WebDriver, Grid, QTP/UFT to develop automation testing scripts for web applications
 Expertise on TDD, Page object model, TestNG, Maven for Project building, Jenkins for continuous integration and HP Quality Centre for defect logging.
 Develop CI/CD Pipeline using Git, Jenkins and Docker.
@@ -19,6 +20,7 @@ Proficient in using object repository, descriptive programming, and checkpoints 
 Report Creation and Script maintenance.
 
 Performance Testing
+
 Execution of performance testing using Load Runner, HP Site-Scope and Performance Centre, HP Quality Centre for Web, Web services \API, Siebel, SAP, and Java applications.
 Worked on various Protocols like Web HTTP, SAP GUI, Web Services, True Client Web, Siebel web and Java Vuser.
 Web applications, Web Service and Rest API, load Testing.
@@ -28,6 +30,7 @@ Database Monitoring and Profiling.
 Developed POC’s to present clients.
 
 Functional Testing and Test management
+
 Performed System, Integration and End to End testing in different domains.
 Professional expertise in Web Services Testing, Smoke Testing, Backed end Testing, User Acceptance Testing (UAT), Functional Testing, Positive/ Negative Testing, System Testing, Regression Testing, UI Validation, Ad-hoc Testing, Cross-Browser/Cross-Platform Testing.
 Web service testing using Soap UI that includes SOA (Service-oriented Architecture) including SOAP, WSDL, Web Services validation.
@@ -38,6 +41,7 @@ Customer interactions and meetings with stakeholders.
 Coordination with onshore and offshore team members for testing activities and resolving critical issues with development teams.
 
 Onshore Projects
+
 Worked for UK Post Office in Reading, UK.
 Worked for du Telecom in Dubai.
 
@@ -89,7 +93,9 @@ Client meeting at client premises and overcall with different stakeholders.
 Maintenance and enhancements of the test suite with each change request.
 Test exit report, Client signoff.
 It was a challenging project due to the diversity of work in term of the domain and stakeholders, many organisations were involved in it such as banks and insurance partners.
+
 Atos (India) and Atos Middle East Pvt Limited (UAE)– Automation and Performance Tester (April 2015 – Feb 2017)
+
 Worked for Dubai telecom, the aim was to identify existing/new bottlenecks and mitigate them to deliver the quality product and deploy a bug-free application (Siebel CRM, Billing, Tibco EAI) on production Environment.
 
 Requirement gathering for Automation and Performance Testing.
